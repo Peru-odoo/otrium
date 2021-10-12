@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <record id="res_config_settings_view_form_sync_systmes" model="ir.ui.view">
+            <field name="name">res.config.settings.view.form.inherit.sync.systems</field>
+            <field name="model">res.config.settings</field>
+            <field name="priority" eval="25"/>
+            <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[hasclass('settings')]" position="inside">
+                    <div class="app_settings_block" data-string="sync_systems_setting" string="Sync Systmes Settings"
+                         data-key="sync_systems" groups="base.group_erp_manager">
+                        <div id="Sync_systems">
+                            <h2>Local CSV Path</h2>
+                            <div class="row mt16 o_settings_container" name="sync_systems_setting_container">
+                                <div class="col-12 col-lg-6 o_setting_box" id="devices_local_path">
+                                    <div class="o_setting_right_pane">
+                                        <span class="o_form_label">Devices CSV Path</span>
+                                        <div class="text-muted">
+                                            Enter the local path of devices.csv
+                                        </div>
+                                        <div class="content-group">
+                                            <div class="mt16">
+                                                <field name="devices_local_path"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="o_setting_right_pane">
+                                        <span class="o_form_label">Devices CSV Delimiter</span>
+                                        <div class="text-muted">
+                                            Enter the local devices.csv delimiter
+                                        </div>
+                                        <div class="content-group">
+                                            <div class="mt16">
+                                                <field name="devices_delimiter"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-6 o_setting_box" id="content_local_path">
+                                    <div class="o_setting_right_pane">
+                                        <span class="o_form_label">Content CSV Path</span>
+                                        <div class="text-muted">
+                                            Enter the local path of content.csv
+                                        </div>
+                                        <div class="content-group">
+                                            <div class="mt16">
+                                                <field name="content_local_path"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="o_setting_right_pane">
+                                        <span class="o_form_label">Content CSV Delimiter</span>
+                                        <div class="text-muted">
+                                            Enter the local content.csv delimiter
+                                        </div>
+                                        <div class="content-group">
+                                            <div class="mt16">
+                                                <field name="content_delimiter"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h2>SFTP CSV Path</h2>
+                            <div class="row mt16 o_settings_container" name="sync_systems_setting_container">
+                                <div class="col-12 col-lg-6 o_setting_box" id="devices_sftp_path">
+                                    <div class="o_setting_right_pane">
+                                        <span class="o_form_label">Hostname</span>
+                                        <div class="text-muted">
+                                            Enter Hostname
+                                        </div>
+                                        <div class="content-group">
+                                            <div class="mt16">
+                                                <field name="sftp_hostname"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="o_setting_right_pane">
+                                        <span class="o_form_label">Username</span>
+                                        <div class="text-muted">
+                                            Enter Username
+                                        </div>
+                                        <div class="content-group">
+                                            <div class="mt16">
+                                                <field name="sftp_username"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="o_setting_right_pane">
+                                        <span class="o_form_label">Password</span>
+                                        <div class="text-muted">
+                                            Enter Password
+                                        </div>
+                                        <div class="content-group">
+                                            <div class="mt16">
+                                                <field name="sftp_password" password="True"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-6 o_setting_box" id="content_sftp_path">
+                                    <div class="o_setting_right_pane">
+                                        <span class="o_form_label">Devices CSV Path</span>
+                                        <div class="text-muted">
+                                            Enter the SFTP path of devices.csv
+                                        </div>
+                                        <div class="content-group">
+                                            <div class="mt16">
+                                                <field name="devices_sftp_path"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="o_setting_right_pane">
+                                        <span class="o_form_label">Devices CSV Delimiter</span>
+                                        <div class="text-muted">
+                                            Enter the SFTP devices.csv delimiter
+                                        </div>
+                                        <div class="content-group">
+                                            <div class="mt16">
+                                                <field name="devices_sftp_delimiter"/>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="o_setting_right_pane">
+                                        <span class="o_form_label">Content CSV Path</span>
+                                        <div class="text-muted">
+                                            Enter the SFTP path of content.csv
+                                        </div>
+                                        <div class="content-group">
+                                            <div class="mt16">
+                                                <field name="content_sftp_path"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="o_setting_right_pane">
+                                        <span class="o_form_label">Content CSV Delimiter</span>
+                                        <div class="text-muted">
+                                            Enter the SFTP content.csv delimiter
+                                        </div>
+                                        <div class="content-group">
+                                            <div class="mt16">
+                                                <field name="content_sftp_delimiter"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="action_sync_systems_configuration" model="ir.actions.act_window">
+            <field name="name">Settings</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.config.settings</field>
+            <field name="view_mode">form</field>
+            <field name="target">inline</field>
+            <field name="context">{'module': 'sync_systems'}</field>
+        </record>
+
+        <menuitem name="Settings" id="otrium_setting_menu" action="action_sync_systems_configuration"
+                  parent="otrium_menu" sequence="3"
+        />
+    </data>
+</odoo>

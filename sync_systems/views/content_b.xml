@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="Content_B_form_view" model="ir.ui.view">
+            <field name="name">content.b.form</field>
+            <field name="model">content.b</field>
+            <field name="arch" type="xml">
+                <form string="Content">
+                    <header>
+                        <field name="state" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name"/>
+                            <h1>
+                                <field name="name" placeholder="Content Name"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="device_id"/>
+                                <field name="content_id"/>
+                            </group>
+                            <group>
+                                <field name="expire_date"/>
+                                <field name="description"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="Content_B_tree_view" model="ir.ui.view">
+            <field name="name">content.b.tree</field>
+            <field name="model">content.b</field>
+            <field name="arch" type="xml">
+                <tree string="ModelTitle">
+                    <field name="content_id"/>
+                    <field name="name"/>
+                    <field name="description"/>
+                    <field name="device_id"/>
+                    <field name="expire_date"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="Content_B_act_window" model="ir.actions.act_window">
+            <field name="name">Content</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">content.b</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem name="Content" id="content_menu" action="Content_B_act_window" parent="otrium_menu" sequence="2"
+                  />
+    </data>
+</odoo>

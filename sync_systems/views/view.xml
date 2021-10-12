@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <menuitem name="Otrium Sysytem B" id="otrium_menu" web_icon="sync_systems,static/description/icon.png"/>
+
+    </data>
+</odoo>
